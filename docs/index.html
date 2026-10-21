@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Élection — le jeu satirique de la présidentielle</title>
+<meta name="description" content="Élection, le jeu de société satirique de la présidentielle : faites campagne, survivez aux scandales et soyez le premier à 50 points de Pouvoir. 2 à 6 joueurs, 18+, environ 45 minutes. Bientôt sur Ulule.">
+<link rel="canonical" href="https://hugourbest.github.io/jeu-election/">
+<meta name="theme-color" content="#1c2b3a">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Élection">
+<meta property="og:title" content="Élection — le jeu satirique de la présidentielle">
+<meta property="og:description" content="Faites campagne, survivez aux scandales et défendez 30 secondes un camp qui n’est pas le vôtre. Bientôt sur Ulule.">
+<meta property="og:url" content="https://hugourbest.github.io/jeu-election/">
+<meta property="og:image" content="https://hugourbest.github.io/jeu-election/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La boîte, le plateau et les cartes du jeu Élection sur une table en bois">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/playfair-display-normal-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-normal-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/main.js?v=1" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Game",
+  "name": "Élection",
+  "description": "Jeu de société satirique de la présidentielle : faites campagne, survivez aux scandales et soyez le premier à 50 points de Pouvoir.",
+  "url": "https://hugourbest.github.io/jeu-election/",
+  "image": "https://hugourbest.github.io/jeu-election/og.jpg",
+  "inLanguage": "fr",
+  "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 6 },
+  "audience": { "@type": "PeopleAudience", "suggestedMinAge": 18 },
+  "timeRequired": "PT45M",
+  "author": { "@type": "Person", "name": "Hugo" }
+}
+</script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-pion" viewBox="0 0 40 56"><circle cx="20" cy="11" r="8"/><rect x="10" y="19.5" width="20" height="4" rx="2"/><path d="M14.5 23.5h11c0 9 3.5 15 7.5 21.5H7c4-6.5 7.5-12.5 7.5-21.5Z"/><rect x="3" y="45" width="34" height="9" rx="3"/></symbol>
+  <symbol id="i-joueurs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16.6 14.6c2.6.1 4.4 1.7 4.9 4.4"/></g></symbol>
+  <symbol id="i-chrono" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></g></symbol>
+  <symbol id="i-buzz" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 2 4 13.6h6.6L9.4 22 20 9.4h-6.6L13.6 2Z"/></symbol>
+  <symbol id="i-micro" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8.5" y="2.5" width="7" height="12" rx="3.5"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7"/></g></symbol>
+  <symbol id="i-sondage" viewBox="0 0 24 24"><g fill="currentColor"><rect x="4" y="11" width="4" height="9" rx="1"/><rect x="10" y="5" width="4" height="15" rx="1"/><rect x="16" y="8" width="4" height="12" rx="1"/></g></symbol>
+  <symbol id="i-drapeau" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V3.5"/><path d="M5 4h12.5l-2.8 4 2.8 4H5"/></g></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l5.5 4.5v-15L6 9H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></g></symbol>
+  <symbol id="i-de" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><circle cx="8.3" cy="8.3" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="15.7" cy="15.7" r="1.6"/></g></symbol>
+  <symbol id="i-fleche" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></g></symbol>
+  <symbol id="i-loupe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8M10.5 7.5v6M7.5 10.5h6"/></g></symbol>
+  <symbol id="i-fermer" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#haut"><img src="favicon.svg" alt="" width="34" height="34"><span>Élection</span></a>
+    <nav class="site-nav" aria-label="Sections de la page">
+      <a href="#principe">Le jeu</a>
+      <a href="#candidats">Les candidats</a>
+      <a href="#cartes">Les cartes</a>
+      <a href="#plateau">Le plateau</a>
+      <a href="#mot">Le mot de Hugo</a>
+    </nav>
+    <a class="btn btn--gold btn--sm" href="https://fr.ulule.com/jeu-de-societe-election/"><span>Soutenir<span class="hide-sm"> sur Ulule</span></span></a>
+  </div>
+</header>
+
+<main id="contenu">
+
+<section class="hero" id="haut" aria-labelledby="titre">
+  <div class="wrap hero__inner">
+    <p class="pill"><span class="pill__dot" aria-hidden="true"></span>Lancement imminent sur Ulule</p>
+    <p class="eyebrow eyebrow--gold">Le jeu satirique de la présidentielle</p>
+    <img class="hero__cocarde" src="favicon.svg" alt="" width="200" height="200">
+    <h1 class="hero__title" id="titre">Élection</h1>
+    <span class="tricolore" aria-hidden="true"></span>
+    <div class="pions" aria-hidden="true">
+      <svg style="color:var(--communiste)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--socialo)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--ecolo)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--centriste)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--droitard)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--patriote)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--journaliste)"><use href="#i-pion"/></svg>
+      <svg style="color:var(--abstentionniste)"><use href="#i-pion"/></svg>
+    </div>
+    <p class="hero__lead">Faites campagne de la Fête de l’Huma au Puy du Fou, survivez aux scandales et défendez pendant 30&nbsp;secondes un camp qui n’est pas le vôtre. Premier à 50&nbsp;points de Pouvoir&nbsp;? Vous êtes élu.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--gold btn--lg" href="https://fr.ulule.com/jeu-de-societe-election/">Me prévenir du lancement<svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      <a class="btn btn--ghost btn--lg" href="#rejoindre">Devenir testeur</a>
+    </div>
+    <ul class="hero__meta">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-joueurs"/></svg>2 à 6 joueurs</li>
+      <li><span class="age" aria-hidden="true">18+</span><span class="sr-only">À partir de 18 ans</span></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-chrono"/></svg>~45 min</li>
+    </ul>
+  </div>
+</section>
+
+<div class="vitrine-bloc">
+  <figure class="wrap vitrine" data-reveal>
+    <picture>
+      <source type="image/avif" srcset="assets/img/table-1280.avif 1280w, assets/img/table-1920.avif 1920w, assets/img/table-2560.avif 2560w" sizes="(min-width: 1192px) 1160px, calc(100vw - 32px)">
+      <img src="assets/img/table-1920.webp" srcset="assets/img/table-1280.webp 1280w, assets/img/table-1920.webp 1920w, assets/img/table-2560.webp 2560w" sizes="(min-width: 1192px) 1160px, calc(100vw - 32px)" width="1920" height="1080" alt="La boîte d’Élection, son plateau de 40 cases, des pions de couleur, un dé et des cartes Buzz, Casserole et Sortie en public posés sur une table en bois.">
+    </picture>
+    <figcaption>Maquette de la boîte, du plateau et des cartes.</figcaption>
+  </figure>
+</div>
+
+<section class="section section--cream section--suite" id="principe" aria-labelledby="principe-titre">
+  <div class="wrap">
+    <header class="section__head" data-reveal>
+      <p class="eyebrow">Profession de foi</p>
+      <h2 id="principe-titre">Cinquante points pour l’Élysée</h2>
+      <p class="section__intro">Chaque joueur incarne un profil politique, du Communiste au Patriote en passant par le Centriste «&nbsp;en même temps&nbsp;». À chaque tour, on lance le dé et on avance sur un plateau de 40&nbsp;cases&nbsp;: bains de foule, plateaux télé, scandales et prises de parole improvisées. Le premier à 50&nbsp;points de Pouvoir remporte la présidentielle.</p>
+    </header>
+    <div class="piliers">
+      <article class="pilier" data-reveal>
+        <span class="pilier__ico pilier__ico--vie" aria-hidden="true"><svg><use href="#i-megaphone"/></svg></span>
+        <h3>Faites campagne</h3>
+        <p>Les cases Vie Publique rapportent des points selon votre camp&nbsp;: la Fête de l’Huma sourit au Communiste, CNews au Patriote, le Fouquet’s au Droitard.</p>
+      </article>
+      <article class="pilier" data-reveal style="--d:1">
+        <span class="pilier__ico pilier__ico--buzz" aria-hidden="true"><svg><use href="#i-buzz"/></svg></span>
+        <h3>Encaissez les scandales</h3>
+        <p>32&nbsp;cartes Buzz font grimper ou plonger votre cote. Et chacun garde en main une Casserole à −10&nbsp;points, à lâcher sur l’adversaire de son choix au moment le plus cruel.</p>
+      </article>
+      <article class="pilier" data-reveal style="--d:2">
+        <span class="pilier__ico pilier__ico--sortie" aria-hidden="true"><svg><use href="#i-micro"/></svg></span>
+        <h3>Défendez l’indéfendable</h3>
+        <p>Sur une case Sortie en public, le dé choisit votre camp. Vous avez 30&nbsp;secondes pour le défendre, même si ce n’est pas le vôtre, puis chaque adversaire vous note de 0 à 2&nbsp;points.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="chiffres" aria-label="Le jeu en chiffres">
+  <ul class="wrap chiffres__liste">
+    <li data-reveal><strong>40</strong><span>cases de campagne</span></li>
+    <li data-reveal style="--d:1"><strong>8</strong><span>profils politiques</span></li>
+    <li data-reveal style="--d:2"><strong>70</strong><span>cartes Buzz, Casserole et Sortie en public</span></li>
+    <li data-reveal style="--d:3"><strong>50</strong><span>points pour être élu</span></li>
+  </ul>
+</section>
+
+<section class="section section--paper" id="candidats" aria-labelledby="candidats-titre">
+  <div class="wrap">
+    <header class="section__head" data-reveal>
+      <p class="eyebrow">Les 8 profils</p>
+      <h2 id="candidats-titre">Choisissez votre camp (ou aucun)</h2>
+      <p class="section__intro">Six familles politiques, chacune avec ses terrains favoris. Et deux rôles à part, pour ceux qui préfèrent tirer les ficelles… ou rester chez eux le jour du vote.</p>
+    </header>
+    <ul class="profils">
+      <li class="profil" style="--p:var(--communiste)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Communiste</h3><p class="profil__tag">Extrême gauche</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>Fête de l’Huma</span><b>+10</b></li>
+          <li><span>1<sup>er</sup>&nbsp;Mai</span><b>+8</b></li>
+          <li><span>France Inter</span><b>+7</b></li>
+          <li><span>Mairie de Paris</span><b>+5</b></li>
+        </ul>
+      </li>
+      <li class="profil" style="--p:var(--socialo)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Socialo</h3><p class="profil__tag">Gauche, socialisme modéré</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>Fête de l’Huma</span><b>+7</b></li>
+          <li><span>1<sup>er</sup>&nbsp;Mai</span><b>+5</b></li>
+          <li><span>France Inter</span><b>+5</b></li>
+          <li><span>Mairie de Paris</span><b>+5</b></li>
+        </ul>
+      </li>
+      <li class="profil" style="--p:var(--ecolo)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>L’Écolo</h3><p class="profil__tag">Vert, décroissance assumée</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>1<sup>er</sup>&nbsp;Mai</span><b>+7</b></li>
+          <li><span>France Inter</span><b>+7</b></li>
+          <li><span>Sciences Po</span><b>+7</b></li>
+          <li><span>Fête de l’Huma</span><b>+3</b></li>
+        </ul>
+      </li>
+      <li class="profil" style="--p:var(--centriste)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Centriste</h3><p class="profil__tag">Centre, «&nbsp;en même temps&nbsp;»</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>Discours du Président</span><b>+5</b></li>
+          <li><span>Journée du Patrimoine</span><b>+5</b></li>
+          <li><span>Fouquet’s</span><b>+4</b></li>
+          <li><span>14&nbsp;Juillet</span><b>+4</b></li>
+        </ul>
+      </li>
+      <li class="profil" style="--p:var(--droitard)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Droitard</h3><p class="profil__tag">Droite, libéralisme assumé</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>Fouquet’s</span><b>+5</b></li>
+          <li><span>Puy du Fou</span><b>+5</b></li>
+          <li><span>Salon de l’Agriculture</span><b>+4</b></li>
+          <li><span>Discours du Président</span><b>+4</b></li>
+        </ul>
+      </li>
+      <li class="profil" style="--p:var(--patriote)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Patriote</h3><p class="profil__tag">Extrême droite</p></div>
+        </div>
+        <p class="profil__label">Terrains favoris</p>
+        <ul class="bonus">
+          <li><span>Passage CNews</span><b>+9</b></li>
+          <li><span>Salon de l’Agriculture</span><b>+8</b></li>
+          <li><span>Puy du Fou</span><b>+7</b></li>
+          <li><span>14&nbsp;Juillet</span><b>+5</b></li>
+        </ul>
+      </li>
+      <li class="profil profil--special" style="--p:var(--journaliste)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>Le Journaliste</h3><p class="profil__tag">Rôle spécial, faiseur de rois</p></div>
+        </div>
+        <p class="profil__texte">Aucun bonus de terrain. S’il atteint 50&nbsp;points en premier, il offre la victoire au joueur de son choix… ou entre lui-même en politique, sous la couleur de son choix, avec 40&nbsp;points.</p>
+      </li>
+      <li class="profil profil--special profil--blanc" style="--p:var(--abstentionniste)" data-reveal>
+        <div class="profil__tete">
+          <svg class="pion" aria-hidden="true"><use href="#i-pion"/></svg>
+          <div><h3>L’Abstentionniste</h3><p class="profil__tag">Ni gauche ni droite</p></div>
+        </div>
+        <p class="profil__texte">Aucun bonus, mais insensible aux Buzz et aux Casseroles. Il peut changer de rôle en cours de partie, et gagne si personne n’atteint 50&nbsp;points.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--navy" id="cartes" aria-labelledby="cartes-titre">
+  <div class="wrap">
+    <header class="section__head" data-reveal>
+      <p class="eyebrow eyebrow--gold">Revue de presse</p>
+      <h2 id="cartes-titre">70 cartes pour faire (et&nbsp;défaire) une carrière</h2>
+      <p class="section__intro">Un avant-goût des trois paquets. Les autres cartes, vous les découvrirez autour de la table.</p>
+    </header>
+
+    <div class="paquet" data-reveal>
+      <div class="paquet__info">
+        <h3><span class="paquet__ico paquet__ico--buzz" aria-hidden="true"><svg><use href="#i-buzz"/></svg></span>Buzz</h3>
+        <p class="paquet__meta">32 cartes · de −3 à +3 points</p>
+        <p class="paquet__texte">Autant de bonnes nouvelles que de mauvaises. Certaines cartes prévoient une pénitence pour se racheter… à condition d’être convaincant.</p>
+      </div>
+      <div class="paquet__cartes">
+        <article class="carte">
+          <p class="carte__bandeau"><span>Buzz</span><span>+3 pts</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">🧠</span>
+            <p class="carte__points">+3 pts</p>
+            <h4 class="carte__titre">Recrutement au mérite</h4>
+            <p class="carte__texte">Vous avez recruté des gens compétents à des postes clés au lieu de placer vos amis et militants.</p>
+          </div>
+        </article>
+        <article class="carte carte--rouge">
+          <p class="carte__bandeau"><span>Buzz</span><span>−3 pts</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">😱</span>
+            <p class="carte__points">−3 pts</p>
+            <h4 class="carte__titre">Évasion fiscale</h4>
+            <p class="carte__texte">Vos avoirs dans une banque offshore révélés par un lanceur d’alerte.</p>
+            <p class="carte__penitence"><strong>Pénitence</strong>Passez 2&nbsp;tours. Récupérez 2&nbsp;pts si vous convainquez que c’était légal.</p>
+          </div>
+        </article>
+        <article class="carte carte--brun">
+          <p class="carte__bandeau"><span>Buzz</span><span>−2 pts</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">🗞️</span>
+            <p class="carte__points">−2 pts</p>
+            <h4 class="carte__titre">Livre de règlements de comptes</h4>
+            <p class="carte__texte">Un ex-ministre publie ses mémoires. Vous êtes cité 47&nbsp;fois.</p>
+            <p class="carte__penitence"><strong>Pénitence</strong>Les adversaires inventent un extrait vous concernant. Commentez sérieusement.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="paquet" data-reveal>
+      <div class="paquet__info">
+        <h3><span class="paquet__ico paquet__ico--casserole" aria-hidden="true">−10</span>Casserole</h3>
+        <p class="paquet__meta">8 cartes · −10 points</p>
+        <p class="paquet__texte">Une par joueur, distribuée en secret. À dégainer sur l’adversaire de son choix, une seule fois par partie.</p>
+      </div>
+      <div class="paquet__cartes">
+        <article class="carte carte--casserole">
+          <p class="carte__bandeau"><span>Casserole</span><span>−10 pts</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">🥖</span>
+            <p class="carte__points">−10 pts</p>
+            <h4 class="carte__titre">Le prix de la baguette</h4>
+            <p class="carte__texte">En direct sur BFM, vous ne connaissez ni le prix de la baguette, ni celui du ticket de métro.</p>
+          </div>
+        </article>
+        <article class="carte carte--casserole">
+          <p class="carte__bandeau"><span>Casserole</span><span>−10 pts</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">😴</span>
+            <p class="carte__points">−10 pts</p>
+            <h4 class="carte__titre">Champion de l’absentéisme</h4>
+            <p class="carte__texte">Votre taux d’absentéisme à l’Assemblée nationale bat tous les records. 94&nbsp;% de votes manqués.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="paquet" data-reveal>
+      <div class="paquet__info">
+        <h3><span class="paquet__ico paquet__ico--sortie" aria-hidden="true"><svg><use href="#i-micro"/></svg></span>Sortie en public</h3>
+        <p class="paquet__meta">30 cartes · 0 à 2 points par adversaire</p>
+        <p class="paquet__texte">Un thème d’actualité, un coup de dé, 30&nbsp;secondes pour convaincre la tablée.</p>
+      </div>
+      <div class="paquet__cartes">
+        <article class="carte carte--sortie">
+          <p class="carte__bandeau"><span>Sortie en public</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">👴</span>
+            <h4 class="carte__titre">Les retraites</h4>
+            <p class="carte__texte">Quel âge de départ à la retraite défendez-vous et pourquoi&nbsp;?</p>
+            <p class="carte__pied">Lancez le dé · 30&nbsp;s · 0, 1 ou 2&nbsp;pts</p>
+          </div>
+        </article>
+        <article class="carte carte--sortie">
+          <p class="carte__bandeau"><span>Sortie en public</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">🍞</span>
+            <h4 class="carte__titre">Le pouvoir d’achat</h4>
+            <p class="carte__texte">Que proposez-vous concrètement face à la hausse des prix&nbsp;?</p>
+            <p class="carte__pied">Lancez le dé · 30&nbsp;s · 0, 1 ou 2&nbsp;pts</p>
+          </div>
+        </article>
+        <article class="carte carte--sortie">
+          <p class="carte__bandeau"><span>Sortie en public</span></p>
+          <div class="carte__corps">
+            <span class="carte__emoji" aria-hidden="true">⚡</span>
+            <h4 class="carte__titre">La politique énergétique</h4>
+            <p class="carte__texte">Nucléaire ou renouvelables&nbsp;: quelle est votre vision pour 2050&nbsp;?</p>
+            <p class="carte__pied">Lancez le dé · 30&nbsp;s · 0, 1 ou 2&nbsp;pts</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="essai" id="essai" data-essai data-reveal>
+      <div class="essai__intro">
+        <p class="eyebrow eyebrow--gold">À vous de jouer</p>
+        <h3>Essayez une Sortie en public</h3>
+        <p>Tirez un thème, lancez le dé et défendez le camp désigné pendant 30&nbsp;secondes devant vos amis. Chacun vous note ensuite de 0 à 2&nbsp;points.</p>
+        <noscript><p class="essai__noscript">Activez JavaScript pour lancer le dé et le chrono.</p></noscript>
+      </div>
+      <div class="essai__jeu">
+        <div class="essai__etape">
+          <p class="essai__label">1 · Le thème</p>
+          <div class="essai__theme" aria-live="polite">
+            <span class="essai__emoji" aria-hidden="true" data-theme-emoji>👴</span>
+            <p class="essai__titre" data-theme-titre>Les retraites</p>
+            <p class="essai__question" data-theme-question>Quel âge de départ à la retraite défendez-vous et pourquoi&nbsp;?</p>
+          </div>
+          <button type="button" class="btn btn--ghost btn--sm" data-action="theme">Autre thème</button>
+        </div>
+        <div class="essai__etape">
+          <p class="essai__label">2 · Le camp</p>
+          <div class="de" data-de data-face="0" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="essai__camp" aria-live="polite" data-camp>Le dé désigne le camp à défendre.</p>
+          <button type="button" class="btn btn--gold btn--sm" data-action="de"><svg class="ico" aria-hidden="true"><use href="#i-de"/></svg>Lancer le dé</button>
+        </div>
+        <div class="essai__etape">
+          <p class="essai__label">3 · Le chrono</p>
+          <div class="chrono" data-chrono aria-hidden="true"><span class="chrono__s" data-secondes>30</span></div>
+          <p class="essai__fin" aria-live="polite" data-fin>30&nbsp;secondes pour convaincre.</p>
+          <button type="button" class="btn btn--ghost btn--sm" data-action="chrono" disabled>Démarrer le chrono</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="plateau" aria-labelledby="plateau-titre">
+  <div class="wrap">
+    <header class="section__head" data-reveal>
+      <p class="eyebrow">Le terrain de campagne</p>
+      <h2 id="plateau-titre">40 cases, de la Fête de l’Huma au Puy du Fou</h2>
+      <p class="section__intro">Un tour de France des passages obligés&nbsp;: bistrot du coin, JT de 20&nbsp;h, Salon de l’Agriculture, université d’été… Gare au Conseil constitutionnel et à la Communauté européenne&nbsp;: on y passe son tour.</p>
+    </header>
+    <div class="plateau">
+      <figure class="plateau__fig" data-reveal>
+        <a class="plateau__zoom" href="assets/img/plateau-3000.webp" data-zoom>
+          <picture>
+            <source type="image/avif" srcset="assets/img/plateau-800.avif 800w, assets/img/plateau-1400.avif 1400w" sizes="(min-width: 1000px) 600px, calc(100vw - 32px)">
+            <img src="assets/img/plateau-1400.webp" srcset="assets/img/plateau-800.webp 800w, assets/img/plateau-1400.webp 1400w" sizes="(min-width: 1000px) 600px, calc(100vw - 32px)" width="1400" height="1400" loading="lazy" alt="Le plateau d’Élection : 40 cases autour d’une piste de score de 1 à 50, avec la case Départ place de la République, les cases Vie Publique, Buzz et Sortie en public, et les cases neutres.">
+          </picture>
+          <span class="plateau__indice"><svg class="ico" aria-hidden="true"><use href="#i-loupe"/></svg>Agrandir</span>
+        </a>
+      </figure>
+      <div class="plateau__aide" data-reveal style="--d:1">
+        <h3>Un tour de jeu</h3>
+        <ol class="tour">
+          <li><span><b>Lancez le dé</b> et avancez d’autant de cases.</span></li>
+          <li><span><b>Touchez votre bonus</b> si votre couleur figure sur la case Vie Publique.</span></li>
+          <li><span><b>Jouez votre Casserole</b> sur un adversaire si le moment s’y prête. Une seule fois par partie.</span></li>
+          <li><span><b>Passez le dé</b> au joueur suivant.</span></li>
+        </ol>
+        <h3>Les cases</h3>
+        <ul class="cases">
+          <li><span class="case case--vie" aria-hidden="true"><i style="background:var(--communiste)">+3</i><i style="background:var(--droitard)">+5</i></span><div><b>Vie Publique</b><p>Gagnez les points de votre couleur.</p></div></li>
+          <li><span class="case case--buzz" aria-hidden="true"><svg><use href="#i-buzz"/></svg></span><div><b>Buzz</b><p>Piochez une carte&nbsp;: de −3 à +3&nbsp;points.</p></div></li>
+          <li><span class="case case--sortie" aria-hidden="true"><svg><use href="#i-micro"/></svg></span><div><b>Sortie en public</b><p>Défendez 30&nbsp;s le camp tiré au dé, les adversaires notent.</p></div></li>
+          <li><span class="case case--neutre" aria-hidden="true"><svg><use href="#i-sondage"/></svg></span><div><b>Neutre</b><p>Sondage national, bureau de vote, Conseil des ministres… des effets variés.</p></div></li>
+          <li><span class="case case--depart" aria-hidden="true"><svg><use href="#i-drapeau"/></svg></span><div><b>Départ</b><p>Place de la République&nbsp;: +5&nbsp;points à chaque passage.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper mot" id="mot" aria-labelledby="mot-titre">
+  <div class="wrap mot__inner" data-reveal>
+    <h2 class="eyebrow" id="mot-titre">Le mot du fondateur</h2>
+    <p class="mot__accroche">«&nbsp;Rire de la politique à table, sans que le repas tourne au débat d’entre-deux-tours.&nbsp;»</p>
+    <div class="mot__texte">
+      <p>J’ai créé Élection pour ça. Ici, tout le monde en prend pour son grade&nbsp;: la gauche, la droite, le centre, les extrêmes, et même les journalistes. Personne n’a le beau rôle, et c’est ce qui rend la partie drôle.</p>
+      <p>Avec les Sorties en public, le dé peut vous obliger à défendre le camp d’en face pendant 30&nbsp;secondes. On découvre que ses arguments sont plus coriaces qu’on ne le pensait… et on en rit ensemble.</p>
+      <p>Le jeu a d’abord été testé entre amis, en version imprimée. Avant la présidentielle de 2027, je vous propose de vous entraîner autour d’une table&nbsp;: en famille, entre amis, ou avec l’oncle qui a un avis sur tout.</p>
+    </div>
+    <p class="mot__signature"><span class="mot__nom">Hugo</span><span class="mot__role">Créateur d’Élection</span></p>
+  </div>
+</section>
+
+<section class="section section--navy rejoindre" id="rejoindre" aria-labelledby="rejoindre-titre">
+  <div class="wrap rejoindre__grille">
+    <div class="rejoindre__visuel" data-reveal>
+      <picture>
+        <source type="image/avif" srcset="assets/img/boite-640.avif 640w, assets/img/boite-1080.avif 1080w" sizes="(min-width: 1000px) 460px, min(420px, calc(100vw - 32px))">
+        <img src="assets/img/boite-1080.webp" srcset="assets/img/boite-640.webp 640w, assets/img/boite-1080.webp 1080w" sizes="(min-width: 1000px) 460px, min(420px, calc(100vw - 32px))" width="1080" height="1080" loading="lazy" alt="Le couvercle de la boîte d’Élection : la cocarde tricolore, le titre et les huit pions de couleur.">
+      </picture>
+    </div>
+    <div class="rejoindre__contenu">
+      <header class="section__head section__head--gauche" data-reveal>
+        <p class="eyebrow eyebrow--gold">Rejoignez la campagne</p>
+        <h2 id="rejoindre-titre">Votez Élection</h2>
+        <p class="section__intro">La campagne de financement participatif ouvre bientôt sur Ulule. Les contributeurs recevront la première édition commercialisée du jeu.</p>
+      </header>
+      <ul class="options">
+        <li class="option option--ulule" data-reveal>
+          <div>
+            <p class="option__badge"><span class="pill__dot" aria-hidden="true"></span>Lancement imminent</p>
+            <h3>Soutenir sur Ulule</h3>
+            <p>Inscrivez-vous sur la page Ulule pour être prévenu de l’ouverture, puis contribuez pour recevoir le jeu parmi les premiers.</p>
+          </div>
+          <a class="btn btn--gold" href="https://fr.ulule.com/jeu-de-societe-election/">Me prévenir du lancement<svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        </li>
+        <li class="option" data-reveal style="--d:1">
+          <div>
+            <h3>Devenir testeur</h3>
+            <p>Envie de jouer au prototype avant tout le monde, et de dire ce qui marche… ou ce qui coince&nbsp;? Écrivez-moi.</p>
+          </div>
+          <a class="btn btn--ghost" data-mail="testeur" href="#rejoindre"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Je veux tester</a>
+        </li>
+        <li class="option" data-reveal style="--d:2">
+          <div>
+            <h3>Être tenu au courant</h3>
+            <p>Pas de compte Ulule&nbsp;? Envoyez-moi un e-mail, je vous préviendrai de la sortie du jeu.</p>
+          </div>
+          <a class="btn btn--ghost" data-mail="nouvelles" href="#rejoindre"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Me tenir au courant</a>
+        </li>
+      </ul>
+      <p class="rejoindre__adresse">Ou écrivez directement à <span data-mail-text>gervaishugo [arobase] yahoo.fr</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="faq" aria-labelledby="faq-titre">
+  <div class="wrap wrap--etroit">
+    <header class="section__head" data-reveal>
+      <p class="eyebrow">Conférence de presse</p>
+      <h2 id="faq-titre">Vos questions, sans langue de bois</h2>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Est-ce un jeu engagé pour un camp&nbsp;?</summary>
+        <p>Non. Chaque camp a ses terrains favoris, ses atouts et ses casseroles, et le Journaliste comme l’Abstentionniste viennent brouiller les cartes. Le jeu se moque de tout le monde, à parts égales.</p>
+      </details>
+      <details>
+        <summary>Faut-il s’y connaître en politique&nbsp;?</summary>
+        <p>Pas du tout. Avoir déjà regardé un JT ou survécu à un repas de famille suffit. Les Sorties en public se gagnent à l’aplomb plus qu’à l’expertise.</p>
+      </details>
+      <details>
+        <summary>Pourquoi à partir de 18&nbsp;ans&nbsp;?</summary>
+        <p>Le jeu manie l’humour grinçant&nbsp;: affaires, petites phrases, scandales et sujets d’actualité brûlants. Il s’adresse aux adultes.</p>
+      </details>
+      <details>
+        <summary>Combien de joueurs, et combien de temps&nbsp;?</summary>
+        <p>De 2 à 6&nbsp;joueurs, pour une partie d’environ 45&nbsp;minutes. Le premier à 50&nbsp;points de Pouvoir est élu.</p>
+      </details>
+      <details>
+        <summary>Comment recevoir le jeu&nbsp;?</summary>
+        <p>En contribuant à la campagne Ulule dès son ouverture&nbsp;: les contributeurs recevront la première édition commercialisée. <a href="https://fr.ulule.com/jeu-de-societe-election/">Inscrivez-vous sur la page Ulule</a> pour être prévenu du lancement.</p>
+      </details>
+      <details>
+        <summary>Peut-on y jouer avant sa sortie&nbsp;?</summary>
+        <p>Oui, en devenant testeur du prototype. <a href="#rejoindre">Écrivez à Hugo</a> pour participer.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__haut">
+    <div class="site-footer__marque">
+      <img src="favicon.svg" alt="" width="44" height="44">
+      <div>
+        <p class="site-footer__nom">Élection</p>
+        <p>Le jeu satirique de la présidentielle · 2&nbsp;à&nbsp;6&nbsp;joueurs · 18+ · ~45&nbsp;min</p>
+      </div>
+    </div>
+    <nav class="site-footer__liens" aria-label="Liens utiles">
+      <a href="https://fr.ulule.com/jeu-de-societe-election/">Ulule</a>
+      <a data-mail="contact" href="#rejoindre">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap site-footer__legal">
+    <p>Élection est une œuvre satirique. Les situations décrites dans le jeu sont fictives&nbsp;; les lieux, médias et événements cités le sont à titre parodique.</p>
+    <p>Un jeu imaginé par Hugo. Ce site ne dépose aucun cookie et ne mesure pas l’audience. Hébergement&nbsp;: GitHub Pages.</p>
+  </div>
+</footer>
+
+<dialog class="zoom" id="zoom" aria-labelledby="zoom-titre">
+  <div class="zoom__barre">
+    <p id="zoom-titre">Le plateau d’Élection</p>
+    <button type="button" class="zoom__btn" data-zoom-toggle aria-pressed="false">Taille réelle</button>
+    <button type="button" class="zoom__btn zoom__fermer" data-zoom-close aria-label="Fermer"><svg class="ico" aria-hidden="true"><use href="#i-fermer"/></svg></button>
+  </div>
+  <div class="zoom__vue"><img alt="Le plateau d’Élection en haute définition" width="3000" height="3000" data-apercu="assets/img/plateau-1400.webp" data-src="assets/img/plateau-3000.webp"></div>
+</dialog>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "jeu-election",
+  "private": true,
+  "description": "Landing page du jeu de société satirique Élection (GitHub Pages, dossier docs/)",
+  "scripts": {
+    "images": "node tools/images.mjs",
+    "serve": "python3 -m http.server 8295 --directory docs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}
