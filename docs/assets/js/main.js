@@ -68,9 +68,9 @@
     };
     declencheur.addEventListener('click', (event) => {
       event.preventDefault();
-      if (!image.getAttribute('src')) {
+      if (!image.dataset.hd) {
         // Version déjà affichée dans la page tout de suite, haute définition dès qu'elle est chargée.
-        image.src = image.dataset.apercu;
+        image.dataset.hd = 'demandee';
         const hd = new Image();
         hd.onload = () => { image.src = hd.src; };
         hd.src = image.dataset.src;
